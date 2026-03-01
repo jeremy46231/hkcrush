@@ -88,7 +88,7 @@
   function launchConfetti() {
     try {
       // lightweight confetti - thanks gpt-5
-      const colors = ['#ec4899', '#a855f7', '#6366f1', '#f472b6', '#fb923c']
+      const colors = ['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#1d4ed8']
       const count = 120
       for (let i = 0; i < count; i++) {
         const el = document.createElement('div')
@@ -123,7 +123,7 @@
 
 <div class="w-full max-w-xl space-y-8">
   <div
-    class="space-y-6 rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
+    class="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
   >
     <h2 class="text-2xl font-bold">do they like you?</h2>
     {#if mounted}
@@ -148,7 +148,7 @@
             </span>
             <input
               placeholder="USLACKBOT"
-              class="mt-1 w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 font-mono text-lg tracking-wide focus:border-pink-500 focus:ring-2 focus:ring-pink-500/60 focus:outline-none dark:border-slate-700 dark:bg-slate-800"
+              class="mt-1 w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 font-mono text-lg tracking-wide focus:border-blue-500 focus:ring-2 focus:ring-blue-500/60 focus:outline-none dark:border-slate-700 dark:bg-slate-800"
               bind:value={inputId}
               maxlength={64}
             />
@@ -156,7 +156,7 @@
           {#if error}
             <div
               id="verify-error"
-              class="text-base font-semibold text-pink-600 dark:text-pink-400"
+              class="text-base font-semibold text-red-600 dark:text-red-400"
               role="alert"
               aria-live="polite"
             >
@@ -165,16 +165,14 @@
           {/if}
           <button
             type="submit"
-            class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow transition hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+            class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
             disabled={verifying || !storedHash}
           >
             {verifying ? 'checking…' : 'check'}
           </button>
           {#if verdict === 'yes'}
             <div class="pt-4 text-center text-4xl font-black">
-              <span
-                class="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent drop-shadow"
-              >
+              <span class="text-blue-600">
                 yes ✨
               </span>
             </div>

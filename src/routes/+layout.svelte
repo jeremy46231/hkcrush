@@ -6,7 +6,7 @@
   const title = 'hkcrush'
   const description =
     "hash your crush's slack ID, share the link, they can enter their ID and see if it matches"
-  const theme = '#F6339A'
+  const theme = '#2563EB'
   const ogImage = logoPng
 </script>
 
@@ -28,13 +28,11 @@
 </svelte:head>
 
 <div
-  class="flex min-h-screen flex-col bg-gradient-to-b from-white to-slate-100 text-[17px] leading-relaxed text-slate-800 dark:from-slate-900 dark:to-slate-950 dark:text-slate-100"
+  class="flex min-h-screen flex-col bg-white text-[17px] leading-relaxed text-slate-800 dark:bg-slate-900 dark:text-slate-100"
 >
   <header class="flex items-center justify-between p-6">
     <h1 class="text-4xl font-black tracking-tight lowercase select-none">
-      <span
-        class="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent"
-      >
+      <span class="text-blue-600">
         hkcrush
       </span>
     </h1>
